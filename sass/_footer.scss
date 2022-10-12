@@ -1,0 +1,83 @@
+//Elementos del footer
+footer {
+    background-color: $auxiliarColor;
+    margin-top: 40px;
+    text-align: center;
+    display:flex;
+    justify-content: center;
+    p {
+        font-size: 1.5rem;
+        font-family: 'Josefin Sans', sans-serif;
+        padding-top: 2vh;
+        // padding:2vh 0;
+    }
+
+    ul {
+        // display: inline;
+        padding-left: 0;
+        padding-top: 2.5vh;
+        
+        
+    }
+        li {
+            line-height: 1.8rem;
+            list-style-type: none;
+            :hover {
+                color: $mainColor;
+            }
+    }
+    address {
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+    }
+
+    a[href^="mailto:"]:hover {
+        color: $mainColor;
+    }
+}
+
+.gridAbout {
+    background-color: transparent;
+}
+
+@media(min-width: 1200px) {
+    footer {
+        text-align: left;
+        position: relative;
+        padding: 0 3vh;
+        display: flex;
+        justify-content: left;
+        p {
+            text-align: left;
+        } 
+        ul {
+            display: block;
+            padding-left: 0;
+            justify-content: flex-end;
+            padding-top:20px;
+            li{
+                display:inline;
+                align-items: baseline;
+                &::after { 
+                    content: "·";
+                    padding-left: 15px;
+                    padding-right: 15px;
+                }
+                &:last-child::after {
+                    content: "";
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+    .social-media, address {
+        display: inline;
+        padding-top:5px;
+        // margin-bottom: 10px;
+    }
+
+    address {
+    display: block;
+}
+}

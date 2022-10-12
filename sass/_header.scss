@@ -1,0 +1,60 @@
+
+//Elementos del header
+header {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    p, li {
+        font-family: 'Josefin Sans', sans-serif;
+  
+    }
+    li {
+        text-transform: uppercase;
+        a{ 
+            font-size: 0.7rem;
+        }
+    }
+    button {
+        display: none;
+        visibility: hidden;
+    }
+    nav {
+        display: none;
+        
+    }
+    a:hover {
+        color: $mainColor;
+    }
+}
+
+//Media Queries
+@media(min-width: 1200px) {
+    header {
+        background-color: $backgroundColor;
+        padding: 15px 30px;
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        nav {
+            flex-direction: row; 
+            display: inline;
+            ul li{
+                list-style-type: none;
+                padding-top: 30px;
+                padding-left: 50px;
+                display: inline; 
+                vertical-align: baseline;
+                font-size: 1.2rem;
+                &:first-child {
+                    padding-left: 0;
+                }
+            }  
+        }
+        button {
+            visibility: visible;
+        }
+    }
+}  
+

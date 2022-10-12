@@ -1,0 +1,311 @@
+//Mobile
+h1 {
+  font: {
+    family: "Josefin Sans", sans-serif;
+    weight: 400;
+    size: 2.9rem;
+  }
+  // text-align: center;
+  text-shadow: 1px 1px #000;
+}
+
+h1 + p {
+  text-shadow: 1px 1px #000;
+}
+
+h2 {
+  padding-bottom: 1vh;
+  padding-top: 2.5vh;
+  margin-bottom: 5vh;
+  text: {
+    align: center;
+    decoration: underline solid 5px $mainColor;
+    underline-offset: 15px;
+  }
+  font: {
+    family: "Josefin Sans", sans-serif;
+    weight: 400;
+    size: 2rem;
+  }
+}
+
+.gridAbout h2 {
+  text-decoration: none;
+  margin-bottom: 0;
+}
+
+h2 + p {
+  font-size: 2rem;
+  line-height: 1.6rem;
+}
+
+h1,
+h2 {
+  text-transform: uppercase;
+}
+
+h3 {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+p,
+nav li,
+footer li {
+  font: {
+    family: "Noto Sans", sans-serif;
+    weight: 400;
+  }
+  line-height: 1.6rem;
+}
+
+a,
+li a,
+address a {
+  text-decoration: none;
+  color: #000;
+  :hover {
+    color: $mainColor;
+  }
+}
+section,
+section .container {
+  margin-bottom: 7vh;
+}
+button {
+  display: inline;
+}
+.foto-portada {
+  background-image: url(../img/alvaro-cvg-mW8IZdX7n8E-unsplash.jpg);
+  background-position: center;
+  background-repeat: space;
+  background-size: cover;
+  opacity: 1;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  margin-bottom: 50px;
+}
+
+div.textos p {
+  //Sobre nosotros
+  padding-bottom: 2vh;
+  padding-left: 2vh;
+  padding-right: 2vh;
+  text-align: justify;
+}
+div.textos p:first-of-type {
+  //Sobre nosotros text
+  text-align: center;
+}
+
+section:nth-of-type(1) img {
+  margin-bottom: 10px;
+}
+section:nth-of-type(1) h2 {
+  //Sobre nosotros titol
+  padding-left: 2vh;
+}
+
+@media (max-width: 600px) {
+  section:nth-of-type(1) img:nth-of-type(2) {
+    //Tercera imatge auxiliar
+    display: none;
+  }
+}
+
+.tarjetas-conjunto {
+  div:nth-of-type(1),
+  div:nth-of-type(2) {
+    margin-bottom: 40px;
+  }
+}
+
+.galeria-bodas {
+  display: none;
+}
+
+//Formulario
+form {
+  fieldset {
+    //Bloque del formulario
+    background-color: $mainColor;
+    padding: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    border-radius: 1%;
+  }
+  label {
+    font-size: 1rem;
+    font-family: "Noto Sans", sans-serif;
+    padding-bottom: 4px;
+  }
+  input {
+    //Cajas de texto
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    &:focus-visible {
+      outline: 1px solid darkgrey;
+    }
+  }
+  input[type="checkbox"] {
+    /*Casella de verificació política privacitat*/
+    width: auto;
+    margin-right: 5px;
+  }
+  textarea {
+    display: block;
+    padding: 10px;
+    width: 100%;
+  }
+  div {
+    padding: 0 10px;
+  }
+}
+
+//Elementos de clases
+.screen-reader-only {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+.btn-primary {
+  background-color: $mainColor;
+  border: $mainColor 1px solid;
+  // border-radius: 10px;
+  font: {
+    size: 1.2rem;
+    weight: 600;
+  }
+}
+
+.container-video-youtube {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.titol-petit {
+  color: $mainColor;
+  font: {
+    family: "Josefin Sans", sans-serif;
+    weight: 400;
+    size: 1.5rem;
+  }
+}
+.proteccion-datos {
+  /*Paràgraf informatiu del final*/
+  text-align: left;
+  font-size: 0.7rem;
+}
+
+//Desktop
+
+@media (min-width: 1200px) {
+  .foto-portada {
+    text-align: left;
+  }
+
+  section:nth-of-type(1) img {
+    margin-bottom: 0;
+  }
+  .foto-portada button {
+    margin-top: 60px;
+  }
+  .gridAbout {
+    display: grid;
+    grid-template-columns: repeat(2, 25%) 50%;
+    // grid-template-rows: repeat(5, 1fr);
+    gap: 10px;
+    div.textos {
+      grid-column: 3;
+      padding-left: 10px;
+      h2,
+      p {
+        text-align: left;
+      }
+    }
+    div.textos + img {
+      grid-column: 1;
+      grid-row: 1 / span 2;
+      align-self: center;
+    }
+    div.imatges {
+      grid-column: 2;
+      grid-row: 1;
+      img:first-child {
+        padding-bottom: 10px;
+      }
+    }
+    h2 {
+      padding-top: 2vh;
+    }
+  }
+  .galeria-bodas {
+    display: contents;
+  }
+  .gridNuestrasBodas {
+    display: grid;
+    grid-template-columns: repeat(3 1fr);
+    grid-template-rows: repeat(2 1fr);
+    gap: 10px;
+  }
+
+  .gridNuestrasBodas img:nth-of-type(1) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+  }
+
+  .gridNuestrasBodas img:nth-of-type(2) {
+    grid-column: 2 / 3;
+    grid-row: 1;
+  }
+  .gridNuestrasBodas img:nth-of-type(3) {
+    grid-column: 3 / 4;
+    grid-row: 1;
+  }
+  .gridNuestrasBodas img:nth-of-type(4) {
+    grid-column: 2 / 3;
+    grid-row: 2;
+  }
+  .gridNuestrasBodas img:nth-of-type(5) {
+    grid-column: 3 / 4;
+    grid-row: 2;
+  }
+  .goTop {
+    /*Botón ir arriba*/
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+  }
+
+  .tarjetas-conjunto {
+    display: flex;
+    flex-direction: row;
+    div:nth-of-type(1),
+    div:nth-of-type(2) {
+      margin-right: 40px;
+      margin-bottom: 0;
+    }
+  }
+  .card-title {
+    margin-top: 12px;
+  }
+}
+// .container {
+//     background-color: bisque;
+// }

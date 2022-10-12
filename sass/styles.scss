@@ -1,0 +1,17 @@
+@import 'variables';
+@import 'header';
+@import 'main';
+@import 'footer';
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&family=Noto+Sans:wght@300;400&family=Raleway&family=Roboto:wght@400;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
